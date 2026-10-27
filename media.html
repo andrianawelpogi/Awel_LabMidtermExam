@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrian's Midterm Portfolio - About</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #9fc2da;
+    color: #4e6068;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li a {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.image-group a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.image-group a:hover {
+    transform: scale(1.08);
+}
+
+.circular-img {
+    cursor: pointer;
+}
+
+header {
+    background-color: #634949;
+    color: #f5f4f4;
+    padding: 15px 20px 0 20px;
+    text-align: center;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.brand-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #d10c0c;
+    object-fit: cover;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav {
+    background-color: #525050;
+    margin: 0 -20px;
+    padding: 10px 0 0 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 12px 10px 12px;
+    display: inline-block;
+    position: relative;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.card {
+    background-color: #91def5;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #38423b;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #627267;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #4a574f;
+    max-width: 580px;
+    margin: 0 auto 25px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #555555;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #333333;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.75rem;
+}
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.circular-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d4af37; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-header">
+            <span class="brand-name">Andrian's Midterm Portfolio</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="media.html" class="active">MEDIA</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="card">
+                    <h2>Media Showcase</h2>
+                    <div class="image-group">
+                    <img src="Picture8.jpeg" alt="Creator 1" class="circular-img">
+                 </div>
+                
+
+<div class="audio-player">
+    <h3>Media Showcase</h3>
+    <p>Audio introduction detailing portfolio architecture.</p>
+
+    <audio id="myAudio">
+        <source src="MaMaaaaa.m4a" type="audio/mp4">
+        Your browser does not support audio.
+    </audio>
+
+    <button id="playButton" onclick="toggleAudio()">
+        ▶ Play Audio
+    </button>
+
+    <div class="audio-status" id="audioStatus">
+        Audio is ready
+    </div>
+
+    <div class="time-display">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+    </div>
+
+    <input
+        type="range"
+        id="progressBar"
+        value="0"
+        min="0"
+        max="100"
+        step="0.1"
+        aria-label="Audio progress"
+    >
+</div>
+
+<script>
+    const audio = document.getElementById("myAudio");
+    const playButton = document.getElementById("playButton");
+    const currentTimeDisplay = document.getElementById("currentTime");
+    const durationDisplay = document.getElementById("duration");
+    const progressBar = document.getElementById("progressBar");
+    const audioStatus = document.getElementById("audioStatus");
+
+    function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+
+        return minutes + ":" +
+            String(remainingSeconds).padStart(2, "0");
+    }
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play().catch(() => {
+                audioStatus.textContent =
+                    "Unable to play audio. Check the file path.";
+            });
+        } else {
+            audio.pause();
+        }
+    }
+
+    audio.addEventListener("loadedmetadata", function () {
+        durationDisplay.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener("timeupdate", function () {
+        currentTimeDisplay.textContent = formatTime(audio.currentTime);
+
+        if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            progressBar.value =
+                (audio.currentTime / audio.duration) * 100;
+        }
+    });
+
+    audio.addEventListener("play", function () {
+        playButton.textContent = "⏸ Pause Audio";
+        audioStatus.textContent = "Audio is playing";
+    });
+
+    audio.addEventListener("pause", function () {
+        playButton.textContent = "▶ Play Audio";
+
+        if (!audio.ended) {
+            audioStatus.textContent = "Audio is paused";
+        }
+    });
+
+    audio.addEventListener("ended", function () {
+        playButton.textContent = "▶ Play Audio";
+        audioStatus.textContent = "Audio finished";
+        progressBar.value = 100;
+    });
+
+    audio.addEventListener("waiting", function () {
+        audioStatus.textContent = "Loading audio...";
+    });
+
+    audio.addEventListener("error", function () {
+        audioStatus.textContent =
+            "Audio failed to load. Check the filename.";
+    });
+
+    progressBar.addEventListener("input", function () {
+        if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            audio.currentTime =
+                (progressBar.value / 100) * audio.duration;
+        }
+    });
+</script>
+
+
+            </div>
+            </main>
+
+            <footer>
+                <p>&copy; Developed by Andrian HUMAN-COMPUTER INTERACTION</p>
+            </footer>
+        </body>
+        </html>
